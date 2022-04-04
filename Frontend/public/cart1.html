@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script>
+        function quantity(qty) {
+            var num=2250*qty;
+            document.getElementById("tot").innerHTML="${num}"
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+          <h1>Blood Bag Cart</h1>
+          <table>
+              <thead>
+                  <td>
+                      Blood Type
+                  </td>
+                  <td>
+                    Price
+                  </td>
+                  <td>
+                      QTY
+                  </td>
+                  <td>
+                      Total
+                  </td>
+              </thead>
+              <tbody>
+                  <tr>
+                     <td>B+</td>
+                     <td>2250</td>
+                     <td><input type="number" id="qty" name="quantity" min="1" max="10" onchange=quantity(qty)></td>
+                     <td><div id="tot"></div></td> 
+                  </tr>
+                  <tr>
+                    <td>AB+</td>
+                    <td>2250</td>
+                    <td>2</td>
+                    <td>4500</td> 
+                 </tr>
+              </tbody>
+          </table>
+    </div>
+</body>
+</html>
